@@ -1,0 +1,13 @@
+<section>
+  <h1>Lista de juegos que le gusta a {{ username }}</h1>
+  <!-- track sirve para determina una clave utilizada
+    para asociar los elementos del array con las vistas
+  -->
+  <ul>
+    @for(game of games; track game.id) {
+      <li (click)="favoriteGame(game.name)">
+          {{ game.name}}
+      </li>
+    }
+  </ul>
+</section>
